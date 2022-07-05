@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#run code
+python3 $PYFILE
