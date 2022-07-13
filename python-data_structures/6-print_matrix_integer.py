@@ -4,5 +4,5 @@ def print_matrix_integer(maxtrix=[[]]):
         for row in maxtrix:
             line_to_print = ""
             for num in row:
-                line_to_print += str(num) + " "
-            print("{:d}".format(line_to_print))
+                print("{:d}".format(num), end=" " if num !=[-1] else "")
+            print()
