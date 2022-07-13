@@ -5,4 +5,4 @@ def print_matrix_integer(maxtrix=[[]]):
             line_to_print = ""
             for num in row:
                 line_to_print += str(num) + " "
-            print(line_to_print)
+            print("{:d}".format(line_to_print))
