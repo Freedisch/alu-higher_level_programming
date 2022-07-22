@@ -1,7 +1,4 @@
-from turtle import width
-
-
-i#!/usr/bin/python
+#!/usr/bin/python
 """Define the rectangle"""
 
 
