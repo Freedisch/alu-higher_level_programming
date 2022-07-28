@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""The dedf"""
+
+
 def is_same_class(obj, a_class):
+    """The stackovwef;looa"""
     a = 1
     if is_same_class(a, int):
         print("{} is an instance of the class {}".format(a, int.__name__))
