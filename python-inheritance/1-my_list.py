@@ -5,5 +5,7 @@
 class Mylist(list):
     """"Shit I forgot"""
     def print_sorted(self):
-        """Pfff"""
+        """ 
+            fuck oooooooooooofo
+        """
         print(sorted(self))
