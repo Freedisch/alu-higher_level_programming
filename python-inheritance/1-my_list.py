@@ -1,18 +1,15 @@
 #!/usr/bin/python3
 """
-    1-my_list: class MyList
+    mylistttog
 """
 
 
 class MyList(list):
     """
-        This class inherits from list.
-        Attributes:
-        Methods:
-            print_sorted - prints the list in ascending order
+        fuchhhhhhoff
     """
     def print_sorted(self):
         """
-           prints a list in ascending order.
+           fuckkoooofiof
         """
         print(sorted(self))
