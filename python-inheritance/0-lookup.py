@@ -1,4 +1,4 @@
 """Return lists of attributes of an object"""
-def look(obj):
+def lookup(obj):
     """My funcction"""
     return(dir(obj))
