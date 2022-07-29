@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""The dedf"""
+""" Module """
 
 
 def is_same_class(obj, a_class):
-    """The stackovwef;looa"""
-    return type(obj) is a_class
+    """ Return"""
+    return (type(obj) == a_class)

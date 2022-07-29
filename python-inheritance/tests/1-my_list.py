@@ -3,8 +3,8 @@
 
 
 class MyList(list):
-    """ list """
+    """ my list class """
 
     def print_sorted(self):
-        """ Sorting """
+        """ function prints list in sorted order """
         print(sorted(self))

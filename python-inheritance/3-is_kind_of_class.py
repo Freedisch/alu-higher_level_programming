@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-"""Review the code"""
-
+""" Module """
 
 
 def is_kind_of_class(obj, a_class):
-    """review"""
-    return type(obj) is a_class
+    """ returns type """
+    return isinstance(obj, a_class)
