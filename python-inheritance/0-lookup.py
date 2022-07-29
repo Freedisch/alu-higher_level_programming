@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Return lists of attributes of an object"""
+""" no module use """
+
+
 def lookup(obj):
-    """My funcction"""
-    return(dir(obj))
+    """ function outputs objects of class """
+    return dir(obj)
