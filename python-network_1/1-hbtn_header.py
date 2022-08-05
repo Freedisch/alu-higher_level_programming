@@ -5,10 +5,10 @@ found in the header of the response.
 
 
 if __name__ == '__main__':
-    from urllib.request import urlopen
+    import urllib.request
     import sys
 
-    with urlopen(sys.argv[1]) as response:
+    with urllib.request.urlopen(sys.argv[1]) as response:
         header_var = response.headers.get('X-Request-Id')
         print(header_var)
 
