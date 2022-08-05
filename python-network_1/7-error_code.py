@@ -2,6 +2,7 @@
 """Takes in a URL, sends a request to the URL and
 displays the body of the response"""
 
+
 import requests
 from sys import argv
 
