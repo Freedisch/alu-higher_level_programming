@@ -12,12 +12,11 @@ def add_integer(a, b=98):
     """Find somme of 2 integer"""
     if type(a) is not int and type (a) is not float:
         raise TypeError("a must be an integer")
-    elif a is float: a = int(a)
 
     if type(b) is not int and type (b) is not float:
         raise TypeError("b is not an integer")
-    elif b is float: b = int(b)
 
-    return a + b;
+    return (int(a) + int(b));
 
 
+print(add_integer(2, 56.88))
