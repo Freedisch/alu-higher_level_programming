@@ -7,7 +7,7 @@ if __name__ == '__main__':
     import sys
 
     db = MySQLdb.connect(host='localhost', port=3306,
-                        user=sys.argv[1], password=sys.argv[2], db=sys.argv[3])
+                         user=sys.argv[1], password=sys.argv[2], db=sys.argv[3])
 
     launcher = db.cursor()
     launcher.execute("SELECT * FROM states ORDER BY states.id;")
