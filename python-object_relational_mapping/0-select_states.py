@@ -1,4 +1,4 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
 """Selecting all the states form hbtn_0e_0usa"""
 
 if __name__ == '__main__':
