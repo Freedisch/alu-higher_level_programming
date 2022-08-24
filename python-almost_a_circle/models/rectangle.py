@@ -7,65 +7,43 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """Class describing a rectangle.
-    Public instance methods:
-        - area()
-        - display()
-        - to_dictionary()
-        - update()
-    Inherits from Base.
-    """
-
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Initializes a Rectangle instance.
-        Args:
-            - __width: width
-            - __height: height
-            - __x: position
-            - __y: position
-            - id: id
-        """
 
         self.width = width
         self.height = height
         self.x = x
         self.y = y
         super().__init__(id)
-
+    
     @property
     def width(self):
-        """Retrieves the width attribute."""
-
+        """Retrives the width attribute"""
         return self.__width
 
     @property
     def height(self):
-        """Retrieves the height attribute."""
-
+        """Retrives the height attribute"""
         return self.__height
 
     @property
     def x(self):
-        """Retrieves the x attribute."""
-
-        return self.__x
+        """Retrives the x attribute"""
+        return self.__x 
 
     @property
     def y(self):
-        """Retrieves the y attribute."""
-
+        """Retrives the y attribute"""
         return self.__y
-
+    
     @width.setter
     def width(self, value):
-        """Sets the width attribute."""
-
+        """Sets the width attribute"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
         self.__width = value
-
+    
     @height.setter
     def height(self, value):
         """Sets the height attribute."""
@@ -73,42 +51,37 @@ class Rectangle(Base):
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
-            raise ValueError("height must be > 0")
-        self.__height = value
+            raise ValueError("Value must be > 0")
+        self.__width = value
 
     @x.setter
     def x(self, value):
         """Sets the x attribute."""
-
         if type(value) is not int:
             raise TypeError("x must be an integer")
-        if value < 0:
-            raise ValueError("x must be >= 0")
+        if value <= 0:
+            raise ValueError("Value must be > 0")
         self.__x = value
-
+    
     @y.setter
     def y(self, value):
-        """Sets the y attribute."""
-
+        """set the y attribute"""
         if type(value) is not int:
             raise TypeError("y must be an integer")
-        if value < 0:
-            raise ValueError("y must be >= 0")
-        self.__y = value
+        if value <= 0:
+            raise ValueError("Value must be > 0")
+        self.__x = value
 
     def area(self):
-        """Calculates the area of a Rectangle instance.
-        Returns: area
-        """
-
-        return self.__width * self.__height
+        """Calculate area"""
+        return self.__width * self.___height
 
     def display(self):
-        """Prints the Rectangle instance with the # character."""
+        """Prints the rectangle instance with the # charcter"""
 
-        for y in range(0, self.__y):
+        for y in range(0, self):
             print()
-        for i in range(0, self.__height):
+        for i in range (0, self.__height):
             for x in range(0, self.__x):
                 print(" ", end="")
             for j in range(0, self.__width):
@@ -116,22 +89,15 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
-        """Returns a string representation of a Rectangle instance."""
+        """Returns a string representation of a rectangle"""
 
-        s = "[Rectangle] ({}) {}/{} - {}/{}".format(
-            self.id, self.__x, self.__y, self.__width, self.__height)
+        s = "[Rectangle] ({}) - {}/{}".format(
+            self.id, self.__x, self.__y, self.__width, self.__height
+        )
         return s
 
     def update(self, *args, **kwargs):
-        """Updates attributes of an instance.
-        Args:
-            - id attribute
-            - width attribute
-            - height attribute
-            - x attribute
-            - y attribute
-        """
-
+        """Update attribute of instances"""
         if args is not None and len(args) != 0:
             if len(args) >= 1:
                 if type(args[0]) != int and args[0] is not None:
