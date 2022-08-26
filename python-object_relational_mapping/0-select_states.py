@@ -1,16 +1,18 @@
 #!/usr/bin/python3
-"""Selecting all the states form hbtn_0e_0usa"""
+"""
+hbtn_0e_0_usa
+"""
 
-if __name__ == '__main__':
+import MySQLdb
+from sys import argv
 
-    import MySQLdb
-    import sys
-
-    db = MySQLdb.connect(host='localhost', port=3306,
-                         user=sys.argv[1], password=sys.argv[2], db=sys.argv[3])
-
-    launcher = db.cursor()
-    launcher.execute("SELECT * FROM states ORDER BY states.id;")
-    rows = launcher.fetchall()
+if __name__ == "__main__":
+    db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
+                         passwd=argv[2], db=argv[3], charset="utf8")
+    cursor = db.cursor()
+    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    rows = cursor.fetchall()
     for row in rows:
         print(row)
+    cursor.close()
+    db.close()
