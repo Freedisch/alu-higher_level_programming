@@ -6,4 +6,4 @@ class Square extends Rectangle {
     super(size, size);
   }
 }
-exports.Square = Square;
+module.exports = Square;
